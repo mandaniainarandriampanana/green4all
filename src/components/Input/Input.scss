@@ -1,0 +1,51 @@
+@use "../../colors";
+@use "../../Mixins/mixin_textarea" as textarea;
+
+.chat-input {
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  border: 1px solid rgba(colors.$colorNeutral, 0.5);
+  border-radius: 1rem;
+  padding: 1rem;
+
+  &:has(textarea:focus) {
+    border-color: rgba(colors.$colorDevoteam, 0.5);
+  }
+
+  > textarea {
+    @include textarea.raz-textarea;
+    grid-column: 1 / -1;
+    grid-row: 1 / 3;
+    &:focus {
+      border: none;
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  > label[for="files"] {
+    grid-column: 1 / 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 2rem;
+    height: auto;
+
+    &:hover {
+      border-radius: 50%;
+      background-color: rgba(colors.$colorDevoteam, 0.5);
+    }
+
+    > input[type="file"] {
+      display: none;
+    }
+  }
+
+  > button {
+    grid-column: 20 / 21;
+    display: flex;
+    justify-content: flex-end;
+  }
+}

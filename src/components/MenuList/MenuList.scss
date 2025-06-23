@@ -1,0 +1,7 @@
+@use "../../constants";
+
+@media (min-width: (constants.$mobileWidth + 1)) {
+    .menu-list--root {
+        display: none;
+    }
+}

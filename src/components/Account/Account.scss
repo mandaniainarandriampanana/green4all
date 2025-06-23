@@ -1,0 +1,32 @@
+@use "../../colors";
+@use "../../constants";
+
+.Account--root {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  &__firstName {
+    color: colors.$colorDevoteam;
+  }
+
+  &__initial {
+    background-color: colors.$colorInitial;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1rem;
+    color: white;
+  }
+}
+
+@media (max-width: (constants.$mobileWidth)) {
+  .Account--root {
+    display: none;
+  }
+}

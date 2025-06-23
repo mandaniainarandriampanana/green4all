@@ -1,0 +1,26 @@
+@use '../../colors.scss';
+
+.button-root {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0.5rem;
+  font: inherit;
+  cursor: pointer;
+  width: 100%;
+  text-align: start;
+  border-radius: 1rem;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  &:hover {
+    background-color: rgba(colors.$colorDevoteam, 0.5);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px rgba(colors.$colorDevoteam, 0.5);
+  }
+}
