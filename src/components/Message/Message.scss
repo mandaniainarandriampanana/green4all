@@ -1,0 +1,15 @@
+@use "../../colors";
+
+.message-root {
+  width: fit-content;
+  justify-self: end;
+  align-self: end;
+
+  display: flex;
+  min-width: 50%;
+  align-items: center;
+
+  background-color: colors.$colorNeutral;
+  padding: 1rem;
+  border-radius: 2rem 0 2rem 2rem;
+}
