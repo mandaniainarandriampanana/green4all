@@ -1,0 +1,14 @@
+@mixin fixed-element() {
+    position: fixed;
+    left: 0;
+    right: 0;
+}
+
+@mixin bottom-fixed-element() {
+    @include fixed-element();
+    bottom: 0;
+}
+@mixin top-fixed-element() {
+    @include fixed-element();
+    top: 0;
+}

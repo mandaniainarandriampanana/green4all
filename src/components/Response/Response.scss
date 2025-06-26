@@ -1,0 +1,9 @@
+@use "../../colors";
+
+
+.response-root {
+  width: fit-content;
+  background-color: rgba(colors.$colorDevoteam, 0.1);
+  padding: 1rem;
+  border-radius: 0 2rem 2rem 2rem;
+}
