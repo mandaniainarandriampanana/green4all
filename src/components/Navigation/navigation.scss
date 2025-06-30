@@ -1,5 +1,12 @@
+@use "../../constants.scss";
+
 .navigation {
-    display: flex;
-    flex-direction: column;
-    gap: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+
+  button:has(.button-icon) {
+    margin: constants.$standardPadding;
+    width: calc(100% - constants.$standardPadding*2);
+  }
 }

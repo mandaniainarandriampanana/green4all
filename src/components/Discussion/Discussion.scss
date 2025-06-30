@@ -1,5 +1,16 @@
+@use "../../constants.scss";
+@use "../../colors.scss";
+@use "../../Mixins/mixin_scrollbar" as scroll;
+
 .discussion-root {
   flex-grow: 1;
   overflow-y: auto;
   min-height: 0;
+  padding: constants.$paddingXs;
+
+  display: flex;
+  flex-direction: column;
+  gap: constants.$paddingXxs;
+
+  @include scroll.custum-scrollbar(colors.$colorBlack);
 }
