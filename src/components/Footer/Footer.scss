@@ -1,0 +1,11 @@
+@use "../../colors.scss";
+
+div b:nth-of-type(2) {
+  color: colors.$colorDevoteam;
+}
+
+.footer__social-media {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
